@@ -1,10 +1,17 @@
 import React from "react";
-import { HomeWrapper } from "./styles";
+
+import { Feed } from "./styles";
+
+import Layout from "../../components/Layout";
+import Sidebar from "../../modules/Sidebar";
 
 const Home = (props) => {
   return (
     <>
-      <HomeWrapper>home</HomeWrapper>
+      <Layout>
+        <Sidebar></Sidebar>
+        <Feed></Feed>
+      </Layout>
     </>
   );
 };
