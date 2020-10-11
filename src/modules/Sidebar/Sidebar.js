@@ -5,17 +5,23 @@ import {
   SidebarStyled,
   SidebarWrapper,
   SidebarHeading,
-  SidebarMenu,
+  SidebarNav,
 } from "./styles";
+import Icon from "../../components/Icon";
+import SidebarItem from "../../components/SidebarItem";
 
 const Sidebar = (props) => {
   return (
     <SidebarStyled>
       <SidebarWrapper>
         <SidebarHeading>
-          <span>world</span>
+          <span>HWP</span>
         </SidebarHeading>
-        <SidebarMenu></SidebarMenu>
+        <SidebarNav role="navigation">
+          <SidebarItem iconName="home" children="home" />
+          <SidebarItem iconName="project" children="projects" />
+          <SidebarItem iconName="settings" children="settings" />
+        </SidebarNav>
       </SidebarWrapper>
     </SidebarStyled>
   );

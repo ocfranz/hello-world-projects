@@ -6,7 +6,7 @@ const SidebarStyled = styled.div`
 `;
 
 const SidebarWrapper = styled.div`
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   height: 100%;
 `;
@@ -23,20 +23,19 @@ const SidebarHeading = styled.div`
     font-weight: bold;
     font-size: 18px;
     text-align: right;
-    &:before {
-      content: "Hello";
-      display: block;
-      text-align: left;
-    }
-    &:after {
-      content: "projects";
-      display: block;
-    }
   }
 `;
 
-const SidebarMenu = styled.div`
+const SidebarNav = styled.nav`
   height: calc(100% - 70px);
+  display: flex;
+  flex-direction: column;
 `;
 
-export { SidebarStyled, SidebarWrapper, SidebarHeading, SidebarMenu };
+
+export {
+  SidebarStyled,
+  SidebarWrapper,
+  SidebarHeading,
+  SidebarNav,
+};

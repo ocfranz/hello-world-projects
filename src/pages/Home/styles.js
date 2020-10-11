@@ -12,6 +12,7 @@ const HomeWrapper = styled.div`
 
 const Feed = styled.div`
   width: 50%;
+  background-color: #2e3141;
 `;
 
 export { HomeWrapper, Feed };

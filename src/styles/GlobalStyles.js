@@ -9,10 +9,11 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        background-color : #F9FAFB;
+        background-color : #222433;
     }
     *{
-        font-family: 'Poppins', sans-serif;
+        color : #ffffff;
+        font-family: 'Inter', sans-serif;
     } 
     #root{
         height: 100%;
