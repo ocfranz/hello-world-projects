@@ -30,12 +30,9 @@ const SidebarNav = styled.nav`
   height: calc(100% - 70px);
   display: flex;
   flex-direction: column;
+  button {
+    margin-top: 15px;
+  }
 `;
 
-
-export {
-  SidebarStyled,
-  SidebarWrapper,
-  SidebarHeading,
-  SidebarNav,
-};
+export { SidebarStyled, SidebarWrapper, SidebarHeading, SidebarNav };

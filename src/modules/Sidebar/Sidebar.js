@@ -9,7 +9,7 @@ import {
 } from "./styles";
 import Icon from "../../components/Icon";
 import SidebarItem from "../../components/SidebarItem";
-
+import Button from "../../components/Button";
 const Sidebar = (props) => {
   return (
     <SidebarStyled>
@@ -21,6 +21,7 @@ const Sidebar = (props) => {
           <SidebarItem iconName="home" children="home" />
           <SidebarItem iconName="project" children="projects" />
           <SidebarItem iconName="settings" children="settings" />
+          <Button children="create project" handleOnClick={() => {}} />
         </SidebarNav>
       </SidebarWrapper>
     </SidebarStyled>

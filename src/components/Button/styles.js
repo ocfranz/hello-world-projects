@@ -1,27 +1,18 @@
 import styled from "styled-components";
 import { media } from "../../styles/minxins";
+import { ButtonBasic } from "../../styles/utils";
 
 const ButtonStyled = styled.button`
-  padding: 15px 34px;
-  margin: 0px 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: none;
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #9175db;
+  ${ButtonBasic}
+  width: 100%;
+  height: 45px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  &:focus {
-    box-shadow: none;
-    outline: none;
-  }
-
-  ${media.lg`
-  padding: 18px 45px;
   font-size: 16px;
-  line-height: 24px;
-  `}
+  text-transform: capitalize;
+  background: #688cfd;
+  border-radius: 8px;
 `;
 
 export { ButtonStyled };
