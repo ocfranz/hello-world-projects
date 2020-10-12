@@ -12,7 +12,10 @@ const HomeWrapper = styled.div`
 
 const Feed = styled.div`
   width: 50%;
+  padding: 10px 0px;
+`;
+const FeedList = styled.div`
   background-color: #2e3141;
 `;
 
-export { HomeWrapper, Feed };
+export { HomeWrapper, Feed, FeedList };

@@ -16,4 +16,15 @@ const ButtonBasic = css`
   }
 `;
 
-export { SimpleA, ButtonBasic };
+const noBorder = css`
+  border: none;
+`;
+const InputBasic = css`
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+`;
+
+export { SimpleA, ButtonBasic, noBorder, InputBasic };
