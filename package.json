@@ -14,7 +14,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "server": "node ./server/index.js",
+    "serve": "node ./server/index.js",
     "dev:start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test"

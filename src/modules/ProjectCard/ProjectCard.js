@@ -3,9 +3,12 @@ import PropTypes from "prop-types";
 import { formatDistance, subDays } from "date-fns";
 import {
   ProjectCardStyled,
+  ProjectCardBody,
   ProjectCardWrapper,
   ProjectTitle,
   ProjectCardHeading,
+  ProjectCardFooter,
+  ProjectCardFooterItem,
 } from "./styles";
 
 import Icon from "../../components/Icon";
@@ -14,26 +17,35 @@ const ProjectCard = ({ project }) => {
   return (
     <ProjectCardStyled>
       <ProjectCardWrapper>
-        <ProjectCardHeading>
-          <img src={project.userThumbnail} />
+        <ProjectCardBody>
+          <ProjectCardHeading>
+            <img src={project.userThumbnail} />
+            <div>
+              <span className="projectcard__username">{project.userName}</span>
+              <span className="projectcard__date">
+                {formatDistance(subDays(new Date("2020-10-1"), 0), new Date())}
+                ago
+              </span>
+            </div>
+          </ProjectCardHeading>
           <div>
-            <span className="projectcard__username">{project.userName}</span>
-            <span className="projectcard__date">
-              {formatDistance(subDays(new Date("2020-10-1"), 0), new Date())}
-              ago
-            </span>
+            <ProjectTitle>{project.title}</ProjectTitle>
           </div>
-        </ProjectCardHeading>
-        <div>
-          <ProjectTitle>{project.title}</ProjectTitle>
-        </div>
-        <div>
-          <span>
-            <Icon iconName="like" color="#ffffff" />
-            {project.likes}
-          </span>
-          <span>{project.comments}</span>
-        </div>
+          <ProjectCardFooter>
+            <ProjectCardFooterItem>
+              <div className="card__button">
+                <Icon iconName="like" color="#AFB6ED" size={20} />
+              </div>
+              <span>{project.likes} Likes</span>
+            </ProjectCardFooterItem>
+            <ProjectCardFooterItem>
+              <div className="card__button">
+                <Icon iconName="comment" color="#AFB6ED" size={20} />
+              </div>
+              <span>{project.comments} Comments</span>
+            </ProjectCardFooterItem>
+          </ProjectCardFooter>
+        </ProjectCardBody>
       </ProjectCardWrapper>
     </ProjectCardStyled>
   );

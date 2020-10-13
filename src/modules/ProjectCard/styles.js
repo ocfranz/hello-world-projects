@@ -1,11 +1,20 @@
 import styled from "styled-components";
+import { remy } from "../../styles/functions";
+import { Pointer } from "../../styles/utils";
+
 const ProjectCardStyled = styled.div`
   width: 100%;
-  padding: 10px 30px;
+  margin-bottom: ${remy(15)};
+  border-radius: ${remy(5)};
 `;
 
 const ProjectCardWrapper = styled.div`
-  margin: 10px 0px;
+  background-color: #2e3141;
+  ${Pointer}
+`;
+
+const ProjectCardBody = styled.div`
+  padding: ${remy(15)} ${remy(30)} ${remy(10)} ${remy(30)};
 `;
 
 const ProjectTitle = styled.div`
@@ -18,10 +27,10 @@ const ProjectTitle = styled.div`
 const ProjectCardHeading = styled.div`
   display: flex;
   align-items: center;
-  padding: 0px 0px 20px 0px;
+  padding: 0rem 0rem ${remy(20)} 0rem;
   img {
-    width: 45px;
-    height: 45px;
+    width: ${remy(45)};
+    height: ${remy(45)};
     border-radius: 50%;
   }
   div {
@@ -41,9 +50,39 @@ const ProjectCardHeading = styled.div`
   }
 `;
 
+const ProjectCardFooter = styled.div`
+  display: flex;
+  padding: ${remy(20)} 0rem ${remy(10)} 0rem;
+`;
+
+const ProjectCardFooterItem = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: ${remy(15)};
+  .card__button {
+    ${Pointer}
+    display : flex;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: #1d1f2c;
+    }
+  }
+  span {
+    font-size: ${remy(14)};
+  }
+`;
+
 export {
   ProjectCardStyled,
   ProjectCardWrapper,
+  ProjectCardBody,
   ProjectTitle,
   ProjectCardHeading,
+  ProjectCardFooter,
+  ProjectCardFooterItem,
 };

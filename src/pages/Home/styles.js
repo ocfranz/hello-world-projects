@@ -15,10 +15,8 @@ const Feed = styled.div`
   padding: 10px 0px;
 `;
 const FeedList = styled.div`
-  background-color: #2e3141;
   margin-top: 15px;
   height: auto;
-  padding: 20px 0px;
 `;
 
 export { HomeWrapper, Feed, FeedList };
