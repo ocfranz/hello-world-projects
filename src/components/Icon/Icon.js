@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import IconHome from "./icons/Home";
 import IconProject from "./icons/Project";
 import IconSetting from "./icons/Settings";
+import IconSearch from "./icons/Search";
 
 const Icon = ({ iconName, size, color }) => {
   return (
@@ -11,6 +12,7 @@ const Icon = ({ iconName, size, color }) => {
       {iconName === "home" && <IconHome size={size} color={color} />}
       {iconName === "project" && <IconProject size={size} color={color} />}
       {iconName === "settings" && <IconSetting size={size} color={color} />}
+      {iconName === "search" && <IconSearch size={size} color={color} />}
     </>
   );
 };

@@ -6,15 +6,30 @@ const SearchBarStyled = styled.div`
   border-radius: 5px;
 `;
 const SearchBarWrapper = styled.div`
-  padding: 10px 20px;
+  padding: 10px 15px;
+  display: flex;
   input {
     background-color: #222433;
     height: 30px;
     font-size: 16px;
-    width: 100%;
+    width: calc(100% - 40px);
+    padding: 3px 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
     ${noBorder}
     ${InputBasic}
   }
 `;
 
-export { SearchBarStyled, SearchBarWrapper };
+const IconWrapper = styled.div`
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222433;
+  svg {
+    opacity: 0.5;
+  }
+`;
+
+export { SearchBarStyled, SearchBarWrapper, IconWrapper };
