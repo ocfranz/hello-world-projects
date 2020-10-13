@@ -19,6 +19,7 @@ const ButtonBasic = css`
 const noBorder = css`
   border: none;
 `;
+
 const InputBasic = css`
   &:focus {
     outline: none;
@@ -27,4 +28,8 @@ const InputBasic = css`
   }
 `;
 
-export { SimpleA, ButtonBasic, noBorder, InputBasic };
+const Pointer = css`
+  cursor: pointer;
+`;
+
+export { SimpleA, ButtonBasic, noBorder, InputBasic, Pointer };

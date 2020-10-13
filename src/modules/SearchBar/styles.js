@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { noBorder, InputBasic } from "../../styles/utils";
+import { noBorder, InputBasic, Pointer } from "../../styles/utils";
+
 const SearchBarStyled = styled.div`
   width: 100%;
   background-color: #2e3141;
@@ -27,6 +28,7 @@ const IconWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #222433;
+  ${Pointer}
   svg {
     opacity: 0.5;
   }

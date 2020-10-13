@@ -5,6 +5,7 @@ import { Feed, FeedList } from "./styles";
 import Layout from "../../components/Layout";
 import Sidebar from "../../modules/Sidebar";
 import SearchBar from "../../modules/SearchBar";
+import ProjectCard from "../../modules/ProjectCard";
 
 const Home = (props) => {
   return (
@@ -13,7 +14,10 @@ const Home = (props) => {
         <Sidebar></Sidebar>
         <Feed>
           <SearchBar />
-          <FeedList></FeedList>
+          <FeedList>
+            <ProjectCard />
+            <ProjectCard />
+          </FeedList>
         </Feed>
       </Layout>
     </>
