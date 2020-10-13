@@ -8,6 +8,8 @@ import {
   ProjectCardHeading,
 } from "./styles";
 
+import Icon from "../../components/Icon";
+
 const ProjectCard = ({ project }) => {
   return (
     <ProjectCardStyled>
@@ -18,7 +20,7 @@ const ProjectCard = ({ project }) => {
             <span className="projectcard__username">{project.userName}</span>
             <span className="projectcard__date">
               {formatDistance(subDays(new Date("2020-10-1"), 0), new Date())}
-               ago
+              ago
             </span>
           </div>
         </ProjectCardHeading>
@@ -26,7 +28,10 @@ const ProjectCard = ({ project }) => {
           <ProjectTitle>{project.title}</ProjectTitle>
         </div>
         <div>
-          <span>{project.likes}</span>
+          <span>
+            <Icon iconName="like" color="#ffffff" />
+            {project.likes}
+          </span>
           <span>{project.comments}</span>
         </div>
       </ProjectCardWrapper>
