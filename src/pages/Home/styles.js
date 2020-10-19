@@ -10,8 +10,14 @@ const HomeWrapper = styled.div`
   `}
 `;
 
+const HomeMain = styled.main`
+  width: 100%;
+  margin-top: 50px;
+  display: block;
+`;
+
 const Feed = styled.div`
-  width: 50%;
+  width: 55%;
   padding: 10px 0px;
 `;
 const FeedList = styled.div`
@@ -19,4 +25,4 @@ const FeedList = styled.div`
   height: auto;
 `;
 
-export { HomeWrapper, Feed, FeedList };
+export { HomeWrapper, HomeMain, Feed, FeedList };

@@ -4,25 +4,27 @@ import PropTypes from "prop-types";
 import {
   SidebarStyled,
   SidebarWrapper,
+  SidebarBody,
   SidebarHeading,
   SidebarNav,
 } from "./styles";
-import Icon from "../../components/Icon";
 import SidebarItem from "../../components/SidebarItem";
 import Button from "../../components/Button";
 const Sidebar = (props) => {
   return (
     <SidebarStyled>
       <SidebarWrapper>
-        <SidebarHeading>
-          <span>HWP</span>
-        </SidebarHeading>
-        <SidebarNav role="navigation">
-          <SidebarItem iconName="home" children="home" />
-          <SidebarItem iconName="project" children="projects" />
-          <SidebarItem iconName="settings" children="settings" />
-          <Button children="create project" handleOnClick={() => {}} />
-        </SidebarNav>
+        <SidebarBody>
+          <SidebarHeading>
+            <span>wworld</span>
+          </SidebarHeading>
+          <SidebarNav role="navigation">
+            <SidebarItem iconName="home" children="home" />
+            <SidebarItem iconName="project" children="projects" />
+            <SidebarItem iconName="settings" children="settings" />
+            <Button children="create project" handleOnClick={() => {}} />
+          </SidebarNav>
+        </SidebarBody>
       </SidebarWrapper>
     </SidebarStyled>
   );

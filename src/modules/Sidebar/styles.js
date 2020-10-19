@@ -3,9 +3,14 @@ import styled from "styled-components";
 const SidebarStyled = styled.div`
   width: 20%;
   height: 100%;
+  position: fixed;
 `;
 
 const SidebarWrapper = styled.div`
+  height: 100%;
+`;
+
+const SidebarBody = styled.div`
   width: 60%;
   margin: 0 auto;
   height: 100%;
@@ -35,4 +40,10 @@ const SidebarNav = styled.nav`
   }
 `;
 
-export { SidebarStyled, SidebarWrapper, SidebarHeading, SidebarNav };
+export {
+  SidebarStyled,
+  SidebarBody,
+  SidebarWrapper,
+  SidebarHeading,
+  SidebarNav,
+};
