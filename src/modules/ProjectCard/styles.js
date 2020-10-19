@@ -9,7 +9,7 @@ const ProjectCardStyled = styled.div`
 `;
 
 const ProjectCardWrapper = styled.div`
-  background-color: #2e3141;
+  background-color: #010815;
   ${Pointer}
 `;
 
@@ -41,11 +41,12 @@ const ProjectCardHeading = styled.div`
       font-size: 15px;
       font-weight: bold;
       opacity: 0.6;
+      line-height: 17px;
     }
     .projectcard__date {
       font-size: 13px;
       opacity: 0.6;
-      margin-top: 5px;
+      font-size: 15px;
     }
   }
 `;

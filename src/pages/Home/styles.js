@@ -12,7 +12,6 @@ const HomeWrapper = styled.div`
 
 const HomeMain = styled.main`
   width: 100%;
-  margin-top: 50px;
   display: block;
 `;
 

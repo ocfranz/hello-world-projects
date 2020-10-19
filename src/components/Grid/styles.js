@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../styles/minxins";
 
 const GridContainerStyled = styled.div`
   display: flex;
@@ -7,6 +8,7 @@ const GridContainerStyled = styled.div`
   flex-direction: ${(props) => {
     if (props.row === 1) return "row";
   }};
+  flex-wrap: wrap;
 `;
 
 const GridStyled = styled.div`

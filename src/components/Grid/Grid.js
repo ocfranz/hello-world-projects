@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import GridStyled from "./styles";
+import { GridStyled } from "./styles";
 const Grid = ({ xs, sm, md, lg, xl, children }) => {
   return (
     <GridStyled xs={xs} sm={sm} md={md} lg={lg} xl={xl}>

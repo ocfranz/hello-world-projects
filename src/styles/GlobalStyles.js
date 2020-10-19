@@ -9,11 +9,11 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        background-color : #222433;
+        background-color : #01050C;
     }
     *{
         color : #ffffff;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Baloo Bhaina 2', cursive;
     } 
     #root{
         height: 100%;

@@ -12,7 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Helmet>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;700&display=swap"
         rel="stylesheet"
       />
     </Helmet>
