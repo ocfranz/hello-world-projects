@@ -10,18 +10,49 @@ const HomeWrapper = styled.div`
   `}
 `;
 
-const HomeMain = styled.main`
+const HomeMain = styled.div`
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
 `;
 
 const Feed = styled.div`
-  width: 55%;
+  width: 100%;
   padding: 10px 0px;
+  ${media.md`
+    width: 100%;
+  `}
+  ${media.lg`
+    width: 80%;
+  `}
+  ${media.xl`
+    width: 65%;
+  `}
 `;
 const FeedList = styled.div`
-  margin-top: 15px;
   height: auto;
 `;
 
-export { HomeWrapper, HomeMain, Feed, FeedList };
+const Suggestion = styled.div`
+  display: none;
+  padding: 10px 0px;
+  ${media.md`
+    width: 100%;
+  `}
+  ${media.lg`
+    width: 20%;
+    display : block;
+  `}
+  ${media.xl`
+    width: 35%;
+    display : block;
+  `}
+`;
+
+const SuggestionWrapper = styled.div`
+  margin-left: 20px;
+  background-color: #010815;
+`;
+
+export { HomeWrapper, HomeMain, Feed, FeedList, Suggestion, SuggestionWrapper };

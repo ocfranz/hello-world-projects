@@ -4,14 +4,14 @@ import { ButtonBasic } from "../../styles/utils";
 
 const ButtonStyled = styled.button`
   ${ButtonBasic}
-  width: 100%;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 16px;
+  line-height: 24px;
   text-transform: capitalize;
-  background: #688cfd;
+  padding: 8px 20px;
+  background: ${(props) => {
+    if (props.outline) return "transparent";
+    return "#688cfd";
+  }};
   border-radius: 8px;
 `;
 

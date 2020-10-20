@@ -2,6 +2,7 @@ import { css } from "styled-components";
 
 const SimpleA = css`
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const ButtonBasic = css`

@@ -5,6 +5,7 @@ import {
   ProjectCardStyled,
   ProjectCardBody,
   ProjectCardWrapper,
+  ProjectCardDetails,
   ProjectTitle,
   ProjectCardHeading,
   ProjectCardFooter,
@@ -28,9 +29,18 @@ const ProjectCard = ({ project }) => {
               </span>
             </div>
           </ProjectCardHeading>
-          <div>
+          <ProjectCardDetails>
             <ProjectTitle>{project.title}</ProjectTitle>
-          </div>
+            <p>
+              So one of my team mate changed the directories of our files, I'm
+              not sure if he just moved our files or created a new one and copy
+              pasted the code to that new file. But now some of our files lost
+              all of it's commit history, and there is only one commit. How can
+              I restore the commits history even though the directory has
+              changed or he copy pasted the code to new files with the same
+              name.
+            </p>
+          </ProjectCardDetails>
           <ProjectCardFooter>
             <ProjectCardFooterItem>
               <div className="card__button">

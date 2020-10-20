@@ -1,11 +1,15 @@
 import React from "react";
 
-import { Feed, HomeMain, FeedList } from "./styles";
+import {
+  Feed,
+  HomeMain,
+  FeedList,
+  Suggestion,
+  SuggestionWrapper,
+} from "./styles";
 
 import Layout from "../../components/Layout";
 import Grid from "../../components/Grid";
-import Sidebar from "../../modules/Sidebar";
-import SearchBar from "../../modules/SearchBar";
 import ProjectCard from "../../modules/ProjectCard";
 import Header from "../../modules/Header";
 
@@ -15,10 +19,9 @@ const Home = (props) => {
       <Header />
       <Layout>
         <Grid.Container>
-          <Grid >
+          <Grid>
             <HomeMain>
               <Feed>
-                <SearchBar />
                 <FeedList>
                   <ProjectCard />
                   <ProjectCard />
@@ -27,6 +30,9 @@ const Home = (props) => {
                   <ProjectCard />
                 </FeedList>
               </Feed>
+              <Suggestion>
+                <SuggestionWrapper>ss</SuggestionWrapper>
+              </Suggestion>
             </HomeMain>
           </Grid>
         </Grid.Container>

@@ -10,6 +10,7 @@ const ProjectCardStyled = styled.div`
 
 const ProjectCardWrapper = styled.div`
   background-color: #010815;
+  border-radius: 5px;
   ${Pointer}
 `;
 
@@ -51,6 +52,19 @@ const ProjectCardHeading = styled.div`
   }
 `;
 
+const ProjectCardDetails = styled.div`
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    opacity: 0.7;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+`;
+
 const ProjectCardFooter = styled.div`
   display: flex;
   padding: ${remy(20)} 0rem ${remy(10)} 0rem;
@@ -82,6 +96,7 @@ export {
   ProjectCardStyled,
   ProjectCardWrapper,
   ProjectCardBody,
+  ProjectCardDetails,
   ProjectTitle,
   ProjectCardHeading,
   ProjectCardFooter,
