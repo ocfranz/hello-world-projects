@@ -10,6 +10,7 @@ import {
 
 import Layout from "../../components/Layout";
 import Grid from "../../components/Grid";
+import CreatePostCard from "../../components/CreatePostCard";
 import ProjectCard from "../../modules/ProjectCard";
 import Header from "../../modules/Header";
 
@@ -23,6 +24,7 @@ const Home = (props) => {
             <HomeMain>
               <Feed>
                 <FeedList>
+                  <CreatePostCard />
                   <ProjectCard />
                   <ProjectCard />
                   <ProjectCard />

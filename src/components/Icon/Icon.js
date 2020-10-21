@@ -7,6 +7,7 @@ import IconSetting from "./icons/Settings";
 import IconSearch from "./icons/Search";
 import IconLike from "./icons/Like";
 import IconComment from "./icons/Comment";
+import IconCreate from "./icons/Create";
 
 const Icon = ({ iconName, size, color }) => {
   return (
@@ -17,6 +18,7 @@ const Icon = ({ iconName, size, color }) => {
       {iconName === "search" && <IconSearch size={size} color={color} />}
       {iconName === "like" && <IconLike size={size} color={color} />}
       {iconName === "comment" && <IconComment size={size} color={color} />}
+      {iconName === "create" && <IconCreate size={size} color={color} />}
     </>
   );
 };

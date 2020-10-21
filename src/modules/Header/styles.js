@@ -59,6 +59,27 @@ const HeaderNav = styled.div`
   }
 `;
 
+const CreatePost = styled.div`
+  display: inline-block;
+  vertical-align: middle;
+  button {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    padding: 6px;
+    ${Pointer}
+    border: 1px solid transparent;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border: 1px solid #222433;
+      border-radius: 5px;
+    }
+  }
+`;
+
 const UserAvatarWrapper = styled.div`
   ${Pointer}
   height: 100%;
@@ -77,4 +98,10 @@ const UserAvatarWrapper = styled.div`
   }
 `;
 
-export { HeaderStyled, HeaderWrapper, HeaderNav, UserAvatarWrapper };
+export {
+  HeaderStyled,
+  HeaderWrapper,
+  HeaderNav,
+  UserAvatarWrapper,
+  CreatePost,
+};

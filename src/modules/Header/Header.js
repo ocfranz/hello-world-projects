@@ -6,7 +6,9 @@ import {
   HeaderWrapper,
   HeaderNav,
   UserAvatarWrapper,
+  CreatePost,
 } from "./styles";
+import Icon from "../../components/Icon";
 import Brand from "../../components/Brand";
 import Button from "../../components/Button";
 import SearchBar from "../../modules/SearchBar";
@@ -14,6 +16,7 @@ import UserAvatar from "../../components/UserAvatar";
 
 const Header = (props) => {
   const userAuth = useSelector((state) => state.userReducer.auth, shallowEqual);
+  const onOpenModalCreate = () => {};
   return (
     <>
       <HeaderStyled>
@@ -37,6 +40,13 @@ const Header = (props) => {
 
               {userAuth && (
                 <>
+                  <li>
+                    <CreatePost>
+                      <button onClick={onOpenModalCreate}>
+                        <Icon iconName="create" color="#ffffff" />
+                      </button>
+                    </CreatePost>
+                  </li>
                   <li>
                     <UserAvatarWrapper>
                       <div>Username</div>
