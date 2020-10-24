@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import {
   Feed,
@@ -13,8 +14,11 @@ import Grid from "../../components/Grid";
 import CreatePostCard from "../../components/CreatePostCard";
 import ProjectCard from "../../modules/ProjectCard";
 import Header from "../../modules/Header";
-
+import ModalLogin from "../../modules/ModalLogin";
 const Home = (props) => {
+  const visibleLogin = useSelector(
+    (state) => state.uiReducer.visibleLoginModal
+  );
   return (
     <>
       <Header />
@@ -39,6 +43,7 @@ const Home = (props) => {
           </Grid>
         </Grid.Container>
       </Layout>
+      <ModalLogin visible={visibleLogin} />
     </>
   );
 };

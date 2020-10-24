@@ -2,7 +2,7 @@ import { LOGIN_USER } from "../../actions/user";
 
 const initialStateUi = {
   username: "",
-  auth: true,
+  auth: false,
   userId: "",
 };
 

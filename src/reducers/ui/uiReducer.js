@@ -2,7 +2,7 @@ import {
   UPDATE_FILTER,
   TOGGLE_LOGIN_MODAL,
   TOGGLE_CHECKOUT_MODAL,
-} from "../../actions/uiTypes";
+} from "../../constants";
 
 const initialStateUi = {
   filter: "all",

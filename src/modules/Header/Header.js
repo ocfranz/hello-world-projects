@@ -1,6 +1,6 @@
 import React from "react";
-import { useSelector, shallowEqual } from "react-redux";
-
+import { useSelector, shallowEqual, useDispatch } from "react-redux";
+import { TOGGLE_LOGIN_MODAL } from "../../constants";
 import {
   HeaderStyled,
   HeaderWrapper,
@@ -15,8 +15,14 @@ import SearchBar from "../../modules/SearchBar";
 import UserAvatar from "../../components/UserAvatar";
 
 const Header = (props) => {
+  const dispatch = useDispatch();
   const userAuth = useSelector((state) => state.userReducer.auth, shallowEqual);
   const onOpenModalCreate = () => {};
+
+  const onOpenModalLogin = () => {
+    dispatch({ type: TOGGLE_LOGIN_MODAL, payload: true });
+  };
+
   return (
     <>
       <HeaderStyled>
@@ -30,7 +36,9 @@ const Header = (props) => {
               {!userAuth && (
                 <>
                   <li>
-                    <a href="/">Login</a>
+                    <a  onClick={onOpenModalLogin}>
+                      Login
+                    </a>
                   </li>
                   <li>
                     <Button children="Join us" handleOnClick={() => {}} />
