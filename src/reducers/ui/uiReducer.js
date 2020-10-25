@@ -1,7 +1,6 @@
 import {
   UPDATE_FILTER,
   TOGGLE_LOGIN_MODAL,
-  TOGGLE_CHECKOUT_MODAL,
 } from "../../constants";
 
 const initialStateUi = {
@@ -16,8 +15,6 @@ export const uiReducer = (state = initialStateUi, action) => {
       return { ...state, filter: action.payload };
     case TOGGLE_LOGIN_MODAL:
       return { ...state, visibleLoginModal: action.payload };
-    case TOGGLE_CHECKOUT_MODAL:
-      return { ...state, visibleCheckoutModal: action.payload };
     default:
       return state;
   }

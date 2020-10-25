@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 
-import { TOGGLE_LOGIN_MODAL } from "../../constants";
+import { TOGGLE_SIGNUP_MODAL } from "../../constants";
 import {
   ModalLoginStyled,
   LoginForm,
@@ -41,7 +41,7 @@ const ModalLogin = ({ visible }) => {
 
   const handleCloseModal = () => {
     setFormData((prevState) => ({ password: "", username: "" }));
-    dispatch({ type: TOGGLE_LOGIN_MODAL, payload: false });
+    dispatch({ type: TOGGLE_SIGNUP_MODAL, payload: false });
   };
   return (
     <ModalBase

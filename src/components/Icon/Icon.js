@@ -8,6 +8,7 @@ import IconSearch from "./icons/Search";
 import IconLike from "./icons/Like";
 import IconComment from "./icons/Comment";
 import IconCreate from "./icons/Create";
+import IconX from "./icons/X";
 
 const Icon = ({ iconName, size, color }) => {
   return (
@@ -19,6 +20,7 @@ const Icon = ({ iconName, size, color }) => {
       {iconName === "like" && <IconLike size={size} color={color} />}
       {iconName === "comment" && <IconComment size={size} color={color} />}
       {iconName === "create" && <IconCreate size={size} color={color} />}
+      {iconName === "close" && <IconX size={size} color={color} />}
     </>
   );
 };

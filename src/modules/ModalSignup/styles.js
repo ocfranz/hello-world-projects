@@ -13,7 +13,7 @@ const ModalLoginStyled = styled.div`
   position: relative;
 
   ${media.md`
-    height: 60%;
+    height: 50%;
     margin: 0 auto;
     width: 30%;
     border-radius: 10px;
