@@ -16,7 +16,11 @@ import UserAvatar from "../../components/UserAvatar";
 
 const Header = (props) => {
   const dispatch = useDispatch();
-  const userAuth = useSelector((state) => state.userReducer.auth, shallowEqual);
+  const userAuth = useSelector(
+    (state) => state.userReducer.isAuthenticated,
+    shallowEqual
+  );
+  console.log(userAuth);
   const onOpenModalCreate = () => {};
 
   const onOpenModalLogin = () => {
@@ -36,9 +40,7 @@ const Header = (props) => {
               {!userAuth && (
                 <>
                   <li>
-                    <a  onClick={onOpenModalLogin}>
-                      Login
-                    </a>
+                    <a onClick={onOpenModalLogin}>Login</a>
                   </li>
                   <li>
                     <Button children="Join us" handleOnClick={() => {}} />

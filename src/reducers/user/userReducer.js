@@ -1,15 +1,25 @@
-import { LOGIN_USER } from "../../actions/user";
+import {
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+} from "../../actions/user";
 
-const initialStateUi = {
+const initialState = {
   username: "",
-  auth: false,
   userId: "",
+  isFetching: false,
+  isAuthenticated: false,
+  errorMessage: "",
 };
 
-export const userReducer = (state = initialStateUi, action) => {
+export const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_USER:
-      return { ...state, username: action.payload };
+    case LOGIN_REQUEST:
+      return { ...state, isFetching: true };
+    case LOGIN_SUCCESS:
+      return { ...state, isAuthenticated: true, isFetching: false };
+    case LOGIN_FAILURE:
+      return { ...state, isFetching: false, errorMessage: action.payload };
     default:
       return state;
   }

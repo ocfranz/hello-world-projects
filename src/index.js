@@ -1,25 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { Helmet } from "react-helmet";
-
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { store } from "./stores/store";
 import GlobalStyles from "./styles/GlobalStyles";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(
-  <React.StrictMode>
+const MetaTags = React.memo(() => {
+  return (
     <Helmet>
       <link
         href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;700&display=swap"
         rel="stylesheet"
       />
     </Helmet>
-    <Provider store={store}>
-      <GlobalStyles />
-      <App />
-    </Provider>
+  );
+});
+
+ReactDOM.render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <MetaTags />
+      <Provider store={store}>
+        <GlobalStyles />
+        <App />
+      </Provider>
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
