@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
-import { TOGGLE_LOGIN_MODAL } from "../../constants";
 import {
   HeaderStyled,
   HeaderWrapper,
@@ -13,18 +12,18 @@ import Brand from "../../components/Brand";
 import Button from "../../components/Button";
 import SearchBar from "../../modules/SearchBar";
 import UserAvatar from "../../components/UserAvatar";
+import { toggleModalLogin } from "../../actions/uiTypes";
 
 const Header = (props) => {
   const dispatch = useDispatch();
   const userAuth = useSelector(
-    (state) => state.userReducer.isAuthenticated,
+    (state) => state.user.isAuthenticated,
     shallowEqual
   );
-  console.log(userAuth);
   const onOpenModalCreate = () => {};
 
   const onOpenModalLogin = () => {
-    dispatch({ type: TOGGLE_LOGIN_MODAL, payload: true });
+    dispatch(toggleModalLogin(true));
   };
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { TOGGLE_LOGIN_MODAL } from "../../constants";
 import {
@@ -13,9 +13,11 @@ import {
 import ModalBase from "../../components/ModalBase";
 import Icon from "../../components/Icon";
 import Button from "../../components/Button";
+import { loginUser } from "../../actions/user";
 
 const ModalLogin = ({ visible }) => {
   const dispatch = useDispatch();
+  const auth = useSelector((state) => state.user);
   const modalRef = React.useRef(null);
   const [formData, setFormData] = React.useState({
     username: "",
@@ -42,6 +44,12 @@ const ModalLogin = ({ visible }) => {
   const handleCloseModal = () => {
     setFormData((prevState) => ({ password: "", username: "" }));
     dispatch({ type: TOGGLE_LOGIN_MODAL, payload: false });
+  };
+
+  const doLogin = () => {
+    const { username, password } = formData;
+    dispatch(loginUser({ username, password }));
+    
   };
   return (
     <ModalBase
@@ -74,7 +82,10 @@ const ModalLogin = ({ visible }) => {
               onChange={(e) => onInputChange(e, "password")}
             />
           </LoginFormItem>
-          <Button children="Login" handleOnClick={() => {}} />
+          <Button
+            children={`${auth.isFetching ? "Logging ...." : "Login"}`}
+            handleOnClick={doLogin}
+          />
           <span>Create account</span>
         </LoginForm>
       </ModalLoginStyled>
@@ -86,4 +97,4 @@ ModalLogin.propTypes = {
   visible: PropTypes.bool.isRequired,
 };
 
-export default ModalLogin;
+export default React.memo(ModalLogin);

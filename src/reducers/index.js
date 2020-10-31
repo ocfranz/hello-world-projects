@@ -12,6 +12,6 @@ const persistorConfig = {
   blacklist: ["uiReducer"],
 };
 
-const rootReducer = combineReducers({ uiReducer, userReducer });
+const rootReducer = combineReducers({ ui: uiReducer, user: userReducer });
 
 export default persistReducer(persistorConfig, rootReducer);

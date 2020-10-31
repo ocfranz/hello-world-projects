@@ -16,9 +16,7 @@ import ProjectCard from "../../modules/ProjectCard";
 import Header from "../../modules/Header";
 import ModalLogin from "../../modules/ModalLogin";
 const Home = (props) => {
-  const visibleLogin = useSelector(
-    (state) => state.uiReducer.visibleLoginModal
-  );
+  const visibleLogin = useSelector((state) => state.ui.visibleLoginModal);
   return (
     <>
       <Header />

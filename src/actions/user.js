@@ -1,3 +1,5 @@
+import { toggleModalLogin } from "./uiTypes";
+
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
@@ -14,8 +16,11 @@ const errorLogin = (message) => {
 
 export const loginUser = (creds) => {
   return (dispatch) => {
-    dispatch(requestLogin);
+    dispatch(requestLogin());
     // do axios
-    dispatch(receiveLogin);
+    setTimeout(() => {
+      dispatch(receiveLogin("SampleId"));
+      dispatch(toggleModalLogin(false));
+    }, 1500);
   };
 };
